@@ -1,10 +1,19 @@
 body{
     font-family: "Nunito", sans-serif;
+    margin: 0;
 }
 
 header{
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+    padding-inline: 32px;
+}
+header > div{
     display: flex;
     justify-content: space-between;
+    font-weight: 700;
+    font-size: 16px;
+    margin-inline: auto;
+    max-width: 1400px;
 }
 
 .nav-user-container{
@@ -38,14 +47,27 @@ nav > ul{
 
 a{
     text-decoration-line: none;
+    color: inherit;
 }
 
 .user{
     display: flex;
     align-items: center;
     gap: 16px;
+    font-size: 14px;
+}
+
+nav{
+    margin-inline: auto;
+    font-weight: 700;
 }
 
 .name{
     display: inline-block;
+}
+
+.courses{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
