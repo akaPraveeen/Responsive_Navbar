@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome Page</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #8e44ad, #3498db);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .container {
+      text-align: center;
+      color: white;
+      padding: 30px 50px;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .coming-soon {
+      font-size: 1.5rem;
+      color: #ffe9f5;
+      margin: 0;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-shadow: 0 0 8px #ffffff88;
+    }
+
+    .dots::after {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      text-align: left;
+      animation: dots 1.5s steps(4, end) infinite;
+    }
+
+    @keyframes dots {
+      0%   { content: ''; }
+      25%  { content: '.'; }
+      50%  { content: '..'; }
+      75%  { content: '...'; }
+      100% { content: ''; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the JAVASCRYPT course</h1>
+    <p class="coming-soon">Coming Soon<span class="dots"></span></p>
+  </div>
+</body>
+</html>

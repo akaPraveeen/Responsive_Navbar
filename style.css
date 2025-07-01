@@ -1,0 +1,51 @@
+body{
+    font-family: "Nunito", sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-user-container{
+    display: flex;
+    flex-grow: 1;
+}
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logotxt{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+li ul{
+    display: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+nav > ul{
+    display: flex;
+    padding-left: 0;
+    gap: 48px;
+}
+
+a{
+    text-decoration-line: none;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.name{
+    display: inline-block;
+}
