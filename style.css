@@ -1,13 +1,18 @@
-body{
+body {
     font-family: "Nunito", sans-serif;
     margin: 0;
 }
 
-header{
+*{
+    box-sizing: border-box;
+}
+
+header {
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
     padding-inline: 32px;
 }
-header > div{
+
+header>div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,26 +20,28 @@ header > div{
     font-size: 16px;
     margin-inline: auto;
     max-width: 1400px;
+    position: relative;
 }
 
-.nav-user-container{
+.nav-user-container {
     display: flex;
     flex-grow: 1;
 }
 
-.logoContainer{
+.logoContainer {
     display: flex;
     align-items: center;
     gap: 8px;
 }
-.logotxt{
+
+.logotxt {
     font-size: 20px;
     font-weight: 700;
 }
 
-.courses ul{
+.courses ul {
     /* display: none; */
-    background-color:  rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
     border: 1.5px solid rgba(233, 234, 235, 1);
     border-radius: 5px;
     box-shadow: 0px 4px 10px 0px rgba(30, 27, 27, 0.1);
@@ -49,66 +56,67 @@ header > div{
     transition: all 0.2s ease-in-out;
 }
 
-.courses:hover ul{
+.courses:hover ul {
     opacity: 1;
     top: 90%;
     pointer-events: all;
 }
 
-.courses ul > li + li{
+.courses ul>li+li {
     margin-top: 8px;
 }
 
-.courses ul > li:hover{
+.courses ul>li:hover {
     text-decoration: underline;
     color: #ff9c12;
 }
 
-ul{
+ul {
     padding: 0;
     margin: 0;
 }
 
-li{
+li {
     list-style-type: none;
 }
 
-nav > ul{
+nav>ul {
     display: flex;
     padding-left: 0;
     gap: 48px;
 }
-nav > ul > li {
+
+nav>ul>li {
     padding-block: 10px;
 }
 
-a{
+a {
     text-decoration-line: none;
     color: inherit;
 }
 
-.user{
+.user {
     display: flex;
     align-items: center;
     gap: 16px;
     font-size: 14px;
 }
 
-.user-icon{
+.user-icon {
     display: flex;
     position: relative;
 }
 
-nav{
+nav {
     margin-inline: auto;
     font-weight: 700;
 }
 
-.name{
+.name {
     display: inline-block;
 }
 
-.courses{
+.courses {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -116,15 +124,15 @@ nav{
     position: relative;
 }
 
-.courses > img{
+.courses>img {
     transition: transform 0.25s ease-in-out;
 }
 
-.courses:hover > img{
+.courses:hover>img {
     transform: rotate(-180deg);
 }
 
-.greendot{
+.greendot {
     height: 12px;
     width: 12px;
     position: absolute;
@@ -132,4 +140,72 @@ nav{
     right: 0px;
     bottom: 0px;
     border-radius: 100%;
+}
+
+.close, .burger{
+    display: none;
+}
+#checkbox{
+    opacity: 0;
+}
+
+@media (max-width: 860px) {
+
+    header {
+        padding-inline: 16px;
+    }
+
+    .close, .burger{
+    display: block;
+    }
+
+    .close{
+        margin-left: auto;
+        cursor: pointer;
+    }
+    
+    header > div{
+        padding-block: 6px;
+    }
+
+    .nav-user-container {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 260px;
+        flex-direction: column-reverse;
+        border: 1.5px solid rgba(233, 234, 235, 1);
+        border-radius: 5px;
+        box-shadow: 0px 4px 10px 0px rgba(30, 27, 27, 0.1);
+        top: 18px;
+    }
+
+    .burger:has(input:checked) + .nav-user-container{
+        display: flex;
+    }
+
+    /* input:checked + .burger{
+        display: none;
+    } */
+
+    nav>ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav {
+        margin-inline: unset;
+        padding-left: 24px;
+    }
+
+    nav > ul > li {
+        padding-block: 8px;
+    }
+
+    .user {
+        border-bottom: 1px solid rgba(233, 234, 235, 1);
+        padding-inline: 24px;
+        padding-block: 8px;
+    }
 }
